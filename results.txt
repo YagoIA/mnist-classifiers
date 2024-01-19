@@ -1,0 +1,50 @@
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True, probability=False), max_samples=0.1)
+clf2 = RandomForestClassifier()
+clf3 = AdaBoostClassifier()
+clf4 = DecisionTreeClassifier()
+
+Result: 0.9563
+
+
+
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True, probability=False), max_samples=0.01)
+clf2 = RandomForestClassifier()
+clf3 = AdaBoostClassifier()
+#clf4 = DecisionTreeClassifier()
+clf5 = et_clf = ExtraTreesClassifier()
+Results = 0.9564
+
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True, probability=False), max_samples=0.1)
+Result: 0.9666
+
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True, probability=False), max_samples=0.2)
+0.9664
+
+clf2 = RandomForestClassifier()
+Result: 0.97
+
+clf3 = AdaBoostClassifier()
+0.7299
+
+clf4 = DecisionTreeClassifier()
+0.8773
+
+clf5 = et_clf = ExtraTreesClassifier()
+0.9715
+
+clf6 = HistGradientBoostingClassifier()
+0.9773
+
+[Voting] ............ (1 of 3) Processing random_forest, total=  33.3s
+[Voting] ..... (2 of 3) Processing HistGradientBoosting, total= 3.2min
+[Voting] ............... (3 of 3) Processing extraTrees, total=  27.1s
+0.9748
+
+
+("random_forest", clf2),
+("ada_boost", clf3),
+("decision tree", clf4)
+("HistGradientBoosting", clf6),
+("extraTrees", clf5),
+("svm", clf1)
+0.9734
