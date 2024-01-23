@@ -30,7 +30,7 @@ hard_voting_ensemble = VotingClassifier(estimators=[
 	("extraTrees", clf5),
     ("svm", clf1)
 
-], voting="hard", verbose=True)
+], voting="soft", verbose=True, weights=[0.9, 1, 0.9, 1])
 
 #classifiers = [clf1, clf2, clf3, clf4]
 classifiers = [clf2]

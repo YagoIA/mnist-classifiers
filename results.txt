@@ -51,7 +51,7 @@ clf6 = HistGradientBoostingClassifier()
 [Voting] ..... (2 of 3) Processing HistGradientBoosting, total= 3.2min
 [Voting] ............... (3 of 3) Processing extraTrees, total=  27.1s
 0.9748
-
+0.9778
 
 ("random_forest", clf2),
 ("ada_boost", clf3),
@@ -68,3 +68,6 @@ clf6 = HistGradientBoostingClassifier()
 ("extraTrees", clf5),
 ("svm", clf1) %40
 0.9752
+
+Soft voting
+0.9769
