@@ -20,6 +20,18 @@ Result: 0.9666
 clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True, probability=False), max_samples=0.2)
 0.9664
 
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True), max_samples=0.2)
+0.9669
+
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True), max_samples=0.1)
+0.9585
+
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True), max_samples=0.3)
+0.9714
+
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True), max_samples=0.4)
+0.9744
+
 clf2 = RandomForestClassifier()
 Result: 0.97
 
@@ -48,3 +60,11 @@ clf6 = HistGradientBoostingClassifier()
 ("extraTrees", clf5),
 ("svm", clf1)
 0.9734
+
+("random_forest", clf2),
+# ("ada_boost", clf3),
+# ("decision tree", clf4)
+("HistGradientBoosting", clf6),
+("extraTrees", clf5),
+("svm", clf1) %40
+0.9752

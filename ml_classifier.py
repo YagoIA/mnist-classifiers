@@ -13,7 +13,7 @@ import numpy as np
 # load dataset
 (trainX, trainy), (testX, testy) = mnist.load_data()
 
-clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True, probability=False), max_samples=0.1)
+clf1 = BaggingClassifier(svm.SVC(kernel='rbf', verbose=True), max_samples=0.4)
 clf2 = RandomForestClassifier()
 clf3 = AdaBoostClassifier()
 clf4 = DecisionTreeClassifier()
@@ -23,7 +23,7 @@ clf5 = et_clf = ExtraTreesClassifier()
 clf6 = HistGradientBoostingClassifier()
 
 hard_voting_ensemble = VotingClassifier(estimators=[
-    ("random_forest", clf2),
+   ("random_forest", clf2),
     # ("ada_boost", clf3),
 	# ("decision tree", clf4)
 	("HistGradientBoosting", clf6),
