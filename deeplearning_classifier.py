@@ -50,6 +50,9 @@ def define_model():
 
 	plot_model(
 		model,
+		show_shapes=True,
+		show_layer_names=False,
+		#show_trainable=True,
 		to_file='model.png'
 	)
 
@@ -57,6 +60,7 @@ def define_model():
 
 # plot diagnostic learning curves
 def summarize_diagnostics(histories):
+	print(len(histories))
 	for i in range(len(histories)):
 		# plot loss
 		plt.subplot(2, 1, 1)

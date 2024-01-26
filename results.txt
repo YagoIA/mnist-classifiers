@@ -71,3 +71,6 @@ clf6 = HistGradientBoostingClassifier()
 
 Soft voting
 0.9769
+
+Deep learning 
+99.140
